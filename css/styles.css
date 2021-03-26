@@ -1,0 +1,59 @@
+/* Natural box model */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+    background-color: #102A43;
+    color: rgba(255, 255, 255, 0.87);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title h1 {
+    font-size: 65px;
+    margin-bottom: 0;
+    margin-top: 20px;
+    font-family: 'Acme', sans-serif;
+}
+
+h5 {
+    font-size: 20px;
+    margin: 5px 0 45px;
+}
+
+.container {
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: center;
+    background-color: #243B53;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.number {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #486581;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.number:hover {
+    cursor: pointer;
+    background-color: goldenrod;
+    color: #000000;;
+}
+
+#game-board {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    max-width: 650px;
+    margin-bottom: 20px;
+}
