@@ -14,7 +14,7 @@ body {
 }
 
 .title h1 {
-    font-size: 65px;
+    font-size: 45px;
     margin-bottom: 0;
     margin-top: 20px;
     font-family: 'Acme', sans-serif;
@@ -22,7 +22,11 @@ body {
 
 h5 {
     font-size: 20px;
-    margin: 5px 0 45px;
+    margin: 5px 0 25px;
+}
+
+.message {
+    height: 125px;
 }
 
 .container {
@@ -34,7 +38,7 @@ h5 {
     border-radius: 10px;
 }
 
-.number {
+.numbers {
     width: 40px;
     height: 40px;
     text-align: center;
@@ -44,10 +48,10 @@ h5 {
     margin: 10px;
 }
 
-.number:hover {
+.numbers:hover {
     cursor: pointer;
     background-color: goldenrod;
-    color: #000000;;
+    color: #000000;
 }
 
 #game-board {
@@ -56,4 +60,22 @@ h5 {
     justify-content: center;
     max-width: 650px;
     margin-bottom: 20px;
+}
+
+#feedback span {
+    color: goldenrod;
+}
+
+#play-again {
+    border: none;
+    background-color: goldenrod;
+    padding: 8px 15px;
+    color: #000000;
+    border-radius: 20px;
+}
+
+#play-again:hover, #play-again:active{
+    cursor: pointer;
+    background-color: #cc9b1f;
+    outline: none;
 }
