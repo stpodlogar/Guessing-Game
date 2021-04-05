@@ -1,10 +1,12 @@
 'use strict'
 
+// global variables
 const min = 1;
 const max = 100;
 let secretNum = Math.floor(Math.random() * (max - min) + (min + 1));
 console.log(secretNum);
 
+// insert HTML to select a number between
 document.querySelector('.title').insertAdjacentHTML('beforeend', `<h5>Guess a number between ${min} and ${max}</h5>`);
 
 // Generate numbers increasing by 1 from min to max
@@ -50,12 +52,14 @@ function playGame(event) {
     }
 }
 
+// remove event listeners when game is complete
 function removeListeners() {
     document.querySelectorAll('.numbers').forEach(number => {
         number.removeEventListener('click', playGame);
     })
 }
 
+// change message displayed based on user number
 function toggleMessage(number) {
     let message = document.querySelector('#feedback');
     if (number < secretNum) {
@@ -68,11 +72,13 @@ function toggleMessage(number) {
     }
     else {
         message.innerHTML = `Congrats! It's <span>${secretNum}</span>. <br /> You guessed the secret number in <span>${guesses}</span> tries!`;
+        // show button to play again
         document.querySelector('#play-again').hidden = false;
         document.querySelector('#play-again').addEventListener('click', playAgain);
     }
 }
 
+// function to play game again
 function playAgain() {
     guesses = 0;
     secretNum = Math.floor(Math.random() * (max - min) + (min + 1));
@@ -80,6 +86,7 @@ function playAgain() {
     document.querySelector('#play-again').hidden = true;
     document.querySelector('#feedback').textContent = "Make a Guess!"
     
+    // add event listeners again and change number styles back to original
     document.querySelectorAll('.numbers').forEach(number => {
         number.addEventListener('click', playGame);
         number.style.backgroundColor = "#486581";
@@ -88,9 +95,3 @@ function playAgain() {
 }
 
 createNumbers();
-
-// Add event Listener to each button
-
-// onClick compare guess to random number
-
-// put guess in empty array
