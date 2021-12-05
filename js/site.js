@@ -94,4 +94,6 @@ function playAgain() {
     })
 }
 
+
+// main
 createNumbers();
